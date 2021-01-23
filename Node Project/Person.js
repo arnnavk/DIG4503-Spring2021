@@ -1,4 +1,4 @@
-class Person {
+export class Person {
     constructor(name, favoriteColor)
     {
         this.name = name;
@@ -6,6 +6,6 @@ class Person {
     }
     
     speak() {
-        console.log(this.name);
+        console.log(this.name, this.favoriteColor);
     }
 }

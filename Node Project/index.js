@@ -1,3 +1,3 @@
-import 'Arnav.js';
-const c = new Person();
+import { Arnav } from './Arnav.js';
+const c = new Arnav("Arnav", "red");
 c.speak();
