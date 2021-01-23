@@ -1,2 +1,3 @@
 import 'Arnav.js';
-const c = new Arnav();
+const c = new Person();
+c.speak();
