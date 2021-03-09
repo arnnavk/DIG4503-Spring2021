@@ -1,9 +1,8 @@
-import HomePage from './components/HomePage';
 import ThePowerofNine from './components/ThePowerofNine';
+import './MyStyle.css';
 function App() {
   return (
-    <div>
-      <HomePage/>
+    <div class="thisclass">
       <ThePowerofNine/>
     </div>
   );
