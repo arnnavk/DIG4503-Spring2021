@@ -5,9 +5,6 @@ function ThePowerofNine() {
   const [no, setNo] = useState(0);
   return (
     <div>
-      <h1>The Power of Nine</h1>
-      <p>This is a guessing game. The person who gets 9 No's loses. Guess this Marvel Character.
-      He wears a red suit. He is an X-Men. He carries two swords with him on his back. Who is he?</p>
     <input type="text"/>
       <button>Submit</button>
       <h3>Yes: {yes}</h3>
