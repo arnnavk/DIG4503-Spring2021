@@ -6,7 +6,7 @@ const port = 45030;
 
 App.use(Express.json());
 
-App.put("/people/:create", (req, res) => {
+App.put("/people/create", (req, res) => {
     Database.createOne();
     res.json(
         {
