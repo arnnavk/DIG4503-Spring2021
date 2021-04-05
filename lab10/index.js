@@ -1,4 +1,5 @@
 import Express from 'express';
+import Database from './Database';
 
 const App = Express();
 const port = 45030;
@@ -6,6 +7,7 @@ const port = 45030;
 App.use(Express.json());
 
 App.put("/people/:create", (req, res) => {
+    Database.createOne();
     res.json(
         {
             id: req.params.id,
@@ -15,6 +17,7 @@ App.put("/people/:create", (req, res) => {
 });
 
 App.get("/people/:person", (req, res) => {
+    Database.readOne();
     res.json(
         {
             id: req.params.id,
