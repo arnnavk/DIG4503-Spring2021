@@ -6,7 +6,7 @@ const port = 45030;
 
 App.use(Express.json());
 
-App.put("/people/create", (req, res) => {
+App.put("/people/:create", (req, res) => {
     Database.createOne();
     res.json(
         {
@@ -26,4 +26,6 @@ App.get("/people/:person", (req, res) => {
     );
 });
 
-App.listen(port);
+App.listen(port, () => {
+    console.log("Server is running!");
+});
