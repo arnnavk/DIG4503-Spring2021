@@ -44,6 +44,15 @@ App.delete("/books/:ISBN", (req, res) => {
     res.json(result);
 });
 
+App.patch("/books/:ISBN", (req, res) => {
+    const ISBN = req.params.ISBN;
+    const author = req.body.author;
+    const title = req.body.title;
+    const description = req.body.description;
+    const result = await db.updateOne(ISBN, author, title, description);
+    res.json(result);
+});
+
 App.listen(port, () => {
     console.log("Server is running!");
 });

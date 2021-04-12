@@ -37,10 +37,8 @@ export default class Database {
         });
     }
 
-    async updateOne() {
-        await this.collection.updateOne({
-            
-        });
+    async updateOne(ISBN, title, author, description) {
+        await this.collection.updateOne({"ISBN" : ISBN}, {$set: {"title" : title, "author" : author, "description" : description}});
     }
 
     async deleteOne(ISBN) {
