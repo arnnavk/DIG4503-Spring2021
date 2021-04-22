@@ -14,13 +14,13 @@ App.put("/books/:ISBN", (req, res) => {
     const author = req.body.author;
     const title = req.body.title;
     const description = req.body.description;
-    const result = await db.createOne();
+    const result = db.createOne();
     res.json(result);
 });
 
 App.get("/books/:ISBN", (req, res) => {
     const ISBN = req.params.ISBN;
-    const result = await db.readOne(ISBN);
+    const result = db.readOne(ISBN);
     const result2 = {book: "not found"};
     if(result)
     {
@@ -34,13 +34,13 @@ App.get("/books/:ISBN", (req, res) => {
 App.post("/books/search", (req, res) => {
     const author = req.body.author;
     const title = req.body.title;
-    const result = await db.readMany(author, title);
+    const result = db.readMany(author, title);
     res.json(result);
 });
 
 App.delete("/books/:ISBN", (req, res) => {
     const ISBN = req.params.ISBN;
-    const result = await db.deleteOne(ISBN);
+    const result = db.deleteOne(ISBN);
     res.json(result);
 });
 
@@ -49,7 +49,7 @@ App.patch("/books/:ISBN", (req, res) => {
     const author = req.body.author;
     const title = req.body.title;
     const description = req.body.description;
-    const result = await db.updateOne(ISBN, author, title, description);
+    const result = db.updateOne(ISBN, author, title, description);
     res.json(result);
 });
 
