@@ -7,7 +7,7 @@ function Post() {
 
   function searching() {
 
-    Axios.get('https://localhost:45030/books/' + post)
+    Axios.post('https://localhost:45030/books/' + post)
     // And then...
     .then(function (response) {
         // Use the 'data'
